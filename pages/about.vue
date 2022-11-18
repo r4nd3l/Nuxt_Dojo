@@ -11,10 +11,18 @@
       perspiciatis enim praesentium vero molestias sequi eius magni, est iure
       saepe.
     </p>
+    <div>{{ data }}</div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { data } = await useFetch("/api/currency/GBP");
+
+// const { data } = await useFetch("/api/main?name=amigo", {
+//   method: "post",
+//   body: { age: 30 },
+// });
+</script>
 
 <style scoped>
 h2 {
